@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>Inicio - Gancedo</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset básico */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #fff;
+      font-family: 'Lato', sans-serif;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #3a4e6f;
+      color: #fafafa;
+      padding: 20px 40px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 2.8rem;
+      color: #3a4e6f;
+      margin: 0;
+      letter-spacing: 0.05em;
+    }
+
+    p.lead {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 520px;
+      text-align: center;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    .buttons-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    button.btn {
+      flex: 1 1 140px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #3a4e6f;
+      background-color: transparent;
+      border: 2.5px solid #3a4e6f;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease;
+      user-select: none;
+    }
+
+    button.btn:hover {
+      background-color: #3a4e6f;
+      color: #fafafa;
+      box-shadow: 0 6px 15px rgba(58,78,111,0.4);
+    }
+
+    button.btn:active {
+      background-color: #2c3e5a;
+      border-color: #2c3e5a;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      color: #777;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: auto;
+      box-shadow: inset 0 1px 0 #ddd;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p.lead {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+      button.btn {
+        flex-basis: 100%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      header {
+        font-size: 1.4rem;
+        padding: 15px 20px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      p.lead {
+        font-size: 0.9rem;
+      }
+      button.btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+      footer {
+        font-size: 0.8rem;
+        padding: 12px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Gancedo
+  </header>
+
+  <main>
+    <h1>Bienvenido a Gancedo</h1>
+    <p class="lead">Explora nuestra selección de productos de calidad. Haz clic en cualquiera para ver más detalles.</p>
+
+    <div class="buttons-group">
+      <button class="btn" onclick="alert('¡Estás en Inicio!')">Inicio</button>
+      <button class="btn" onclick="window.location.href='producto?id=1'">Producto 1</button>
+      <button class="btn" onclick="window.location.href='producto?id=2'">Producto 2</button>
+      <button class="btn" onclick="window.location.href='producto?id=3'">Producto 3</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Gancedo. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
