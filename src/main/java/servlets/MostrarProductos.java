@@ -27,12 +27,18 @@ public class MostrarProductos extends HttpServlet {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                request.setAttribute("nombre", rs.getString("nombre"));
+                request.setAttribute("referencia", rs.getString("referencia"));
+                request.setAttribute("nombre", rs.getString("nombre_tela"));
                 request.setAttribute("precio", rs.getDouble("precio"));
-                request.setAttribute("descripcion", rs.getString("descripcion"));
                 request.setAttribute("stock", rs.getInt("stock"));
-                request.setAttribute("categoria", rs.getString("categoria"));
-                request.setAttribute("imagen", rs.getString("imagen_url"));
+                request.setAttribute("tiempo", rs.getString("tiempo_fabricacion"));
+                request.setAttribute("material", rs.getString("material"));
+                request.setAttribute("lavado", rs.getString("instrucciones_lavado"));
+                request.setAttribute("composicion", rs.getString("composicion"));
+                request.setAttribute("ancho", rs.getString("ancho"));
+                request.setAttribute("peso", rs.getString("peso"));
+                request.setAttribute("resistencia", rs.getString("resistencia_luz"));
+                request.setAttribute("imagen", rs.getString("imagen_url")); // ✅ ahora sí carga la imagen
             } else {
                 request.setAttribute("error", "❌ Producto no encontrado con ID: " + id);
             }
